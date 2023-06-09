@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solar Based Irrigation System</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		h1{border:solid; color : black}
+		body{background-color : lightblue}
+		body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+	</style>
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+        <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+    <header>
+		<h1 align = "center">Solar Based Irrigation System</h1>
+	</header>
+	<div class="topnav">
+	 	<a class="active" href="#Abstract">Abstract</a>
+  		<a href="#Introduction">Introduction</a>
+        <a href="#Why Need This System?">Why Need This System?</a>
+  		<a href="#Proposed System">Proposed System</a>
+ 		<a href="#Objectives">Objectives</a>
+        <a href="#DESCRIPTION">DESCRIPTION</a>
+        <a href="#COMPONENTS DESCRIPTION">COMPONENTS DESCRIPTION</a>
+        <a href="#IMPLEMENTATION">IMPLEMENTATION</a>
+        <a href="#FLOW CHART">FLOW CHART</a>
+        <a href="#CIRCUIT DIAGRAM">CIRCUIT DIAGRAM</a>
+        <a href="#ADVANTAGES">ADVANTAGES</a>
+        <a href="#FUTURE SCOPE">FUTURE SCOPE</a>
+        <a href="#CONCLUSION">CONCLUSION</a>
+        <a href="#References">References</a>
+	</div>
+
+    <section id="Abstract" class="main-section">
+        <h2><b><u>Abstract</u></b></h2>
+            <p><i>"In   the   present   scenario,   availability   of   power   and   water   are   insufficient   to   satisfy   the   farmer’s requirements. Traditionally, implemented techniques of irrigation are proving to be less futile as these are not good atmultitasking different concerns which is a combination of availability of water, sources of energy and timely soil profileanalysis. The key objective of the paper is to monitor the soil’s moisture content during its dry and wet conditions withthe aid of a moisture sensor circuit. Solar powered smart irrigation systems are the answer to the Indian farmer. Thissystem consists of solar powered water pump along with an automatic water flow control using a moisture sensor. It is theproposed solution for the present energy crisis for the Indian farmers. This system conserves electricity by reducing theusage of grid power and conserves water by reducing water losses. The WiFi module is operated using a Node-MCUMicrocontroller via utilizing the energy from the solar panel, run the motors which irrigates the field by sensing themoisture in the soil. The water above the marked level is pumped out by a motor by the information from the level sensor.The advancements of technology like IoT have vast demand in various operations. This system can easily access by thefarmer to control the irrigation from anywhere in the world in an effective way."</i></p>
+            <p align="center"><b><i>Keywords: soil moisture, irrigation, IoT, solar power, microcontroller, solar panel</i></b></p>
+    </section>
+
+    <section id="Introduction" class="main-section">
+        <h2><b><u>Introduction</u></b></h2>
+        <img src="Intro.png" alt="Introduction" class="center">
+        <p>Agriculture is the backbone of all the global economy and with its allied sectors, is the incontestably the largest livelihood provider in India. India supports 15% of the world’s water resources. Irrigation plays an importantrole in agriculture. According to the World Bank data, only 35% of India’s agricultural land is irrigated, leavingthe   rest   65%   of   farming   dependent   totally   on   rain.   The   main   objective   is   to   apply   the   system   forimprovement of health of the soil and hence the plant via multiple sensors. Appropriate soil water level is anecessary pre-requisite for optimum plant growth. Also, water being an essential element for life sustenance,there is the necessity to avoid its undue usage. The cost of solar panels has been constantly decreasingwhich encourages its usage in various sectors. One of the applications of this technology is used in irrigationsystems for farming. Solar powered irrigation system can be a suitable alternative for farmers in the presentstate of energy crisis in India. This a green way for energy production which provides free energy once aninitial investment is made.</p> 
+    </section>
+
+    <section id="Why Need This System?" class="main-section">
+        <h2><b><u>Why Need This System?</u></b></h2>
+        <p>Until quite recently, India enjoyed abundant water resources. But population growth and overexploitation hasled to a situation where the demand for water is exceeding supply.</p>
+        <img src="Pic01.png" alt="Why Need This System?" class="center">
+        <p>From the graph we currently notice that the water availability is in stress. If this rate continues, then we wouldface severe water scarcity. So, there is an urgent need to conserve water. During manual irrigation, the water
+            requirement of plants/crops is not monitored. Even when the soil is moist enough, water is still provided. Thiswater is not absorbed by the plants and thus is wasted. Hence a system is to monitor the water requirements ofthe   plant   is   needed.   Also,   Smart   Irrigation   System   installation   means   decreased   operating   expense   bymaintenance personnel.</p>
+    </section>
+
+    <section id="Proposed System" class="main-section">
+        <h2><b><u>Proposed System</u></b></h2>
+        <p>The proposed prototype for the automated solar powered smart irrigation system (SSIS), comprises of ESP8266as   its   master   controller,   DC   water   pump,   DHT11   humidity   and   temperature   sensors   for   monitoring   andcontrolling the irrigation facility where it is mounted. In this model, the layered architecture of the IoT systemis   considered   which   compromises   of   the   Physical/Perception   Layer,   Interface   Layer,   Network   Layer   andApplication Layer as shown in the fig. 1.</p>
+        <img src="Pic02.png" alt="Proposed System" class="center">
+        <p>The physical or perception layer consists of the sensors connected to the system for collection of data. The datacollected is transferred to the master controller which directs information for control and monitoring operationand acts as  an  intermediating layer  between  physical and  application  layer. The  processing unit leads  theaccumulated data into network layer hence facilitating the two-way communication and connectivity pathwayvia cloud infrastructure. Finally, the data reaches application layer which is responsible for monitoring andcontrol functionalities.</p>
+    </section>
+
+    <section id="Objectives" class="main-section">
+        <h2><b><u>Objectives</u></b></h2>
+        <p>To improve and stabilize the crop yields of smallholder olive farmers through the implementation of sustainableirrigation systems. To promote water management practices that optimizes the volume and timing of waterdistribution. To generate positive economic consequences for farmers and their families. Minimize year to yearyield fluctuations, leading to higher and more stable farm income.</p>
+    </section>
+
+    <section id="DESCRIPTION" class="main-section">
+        <h2><b><u>DESCRIPTION</u></b></h2>
+        <p>Proposed irrigation system mainly consists of two modules- Solar pumping module and automatic irrigationmodule. In solar pumping module a solar panel of required specification is mounted near the pump set. Thenusing a control circuit it is used to charge a battery. From the battery using a converter circuit it gives power tothe water pump which is submerged inside the well. Then the water is pumped into an overhead tank for storingwater temporarily before releasing the water into the field.</p>
+        <img src="Pic03.png" alt="DESCRIPTION" class="center">
+        <p>In automatic irrigation module the water outlet valve of the tank is electronically controlled by a soil moisturesensing circuit. The sensor is placed in the field where the crop is being cultivated. The sensor converts themoisture content in the soil into equivalent voltage. This is given to a sensing circuit which has a referencevoltage that can be adjusted by the farmer for setting different moisture levels for different crops. The amountof water needed for soil is proportional to the difference of these two voltages. A control signal was given to astepper motor whose rotational angle is proportional to the difference in voltage. The stepper motor in turnscontrols the crosssectional area of the valve to be opened controlling flow of water. Therefore, the amount ofwater flowing is proportional to the moisture difference.</p>
+        <img src="Pic04.png" alt="DESCRIPTION" class="center">
+    </section>
+
+    <section id="COMPONENTS DESCRIPTION" class="main-section">
+        <h2><b><u>COMPONENTS DESCRIPTION</u></b></h2>
+        <h3>ESP8266:</h3>   
+        <p>ESP8266   is a   cost effective and  optimal power   consumption Wi-Fi   microchip with  fullTCP/IP stack and 32-bit microcontroller capability which allows microcontroller to connect to a Wi-Finetwork and make simple TCP/IP connections using Hayes-style commands. It operated on a powersupply of +- 3.3 V and is programmed using Lua Script. With chip clock rate acceleration and an ADC(Analog  to Digital Converter) to improve the sensitivity, integrating with  soil humidity sensor is acommon application.</p> 
+        <h3>Soil moisture sensor:</h3>
+        <p>Soil moisture sensor’s Analog pin is given to port A- pin 3 of the RIO. Its Vccpin is given to the common terminal on the bread board which is given to port A- pin 1(+5V) of the RIOand its GND terminal is given to port A- pin 11/pin 12.</p>
+        <h3>Temperature sensor:</h3>
+        <p>Temperature sensor’s Vcc pin is given to the 5V pin (in Port C) of the RIO and its GND terminal is given to the common ground on the bread board which is connected to the AGND (Analog ground) pin of the RIO. An analog input is fed to AI0 (0+) pin and AI0 (0- ) is given to AGND probably through a common ground on the bread board.</p>
+        <h3>DC Pump:</h3>
+        <p>The source of energy for DC pumps is from motor, battery, or solar power to move fluid in avariety of ways. In this prototype, 12 V of DC power which is extracted from PV panels with solar cells,producing DC power   when exposed to  sunlight. It  can be  operated  directly  from a  battery,   hencerendering it more convenient, portable, energy efficient and easy to control.</p>
+    </section>
+
+    <section id="IMPLEMENTATION" class="main-section">
+        <h2><b><u>IMPLEMENTATION</u></b></h2>
+        <p>The logic presented by the algorithm facilitates in identifying if there is a necessity of watering the crops /plants. The cascading stages of the logic and decision-making conditions enables the maintenance of the soilmoisture levels and also has the feature of continuous status monitoring of the DC pump by analysing thelogged data in the cloud infrastructure. The process starts with moisture sensors sensing the soil. The output ofthe sensors is relayed to the input pins of master controller unit, comprising of ESP8266.<br><br>The decision and monitoring moisture content of the soil is processed with the help of master controller. <br>The module checks for the below conditions:<br><br><b>A.</b>If the soil is dry, the main controller actuates the relay and water pump starts which leads to water flow.<br><b>B.</b> If the soil is wet, then the controller turns the relay off as a result water pump is off and the water flow stops.<br><br>The energy source for the entire setup is via solar powered PV module, coupled with a charge controller. Theprototype has two modes of operation, first being via direct supply from the PV module to the master controllerand second being via battery storage unit, during low or no irradiance.</p>
+    </section>
+
+    <section id="FLOW CHART" class="main-section">
+        <h2><b><u>FLOW CHART</u></b></h2>
+        <img src="Pic05.png" alt="FLOW CHART" class="center">
+    </section>
+
+    <section id="CIRCUIT DIAGRAM" class="main-section">
+        <h2><b><u>CIRCUIT DIAGRAM</u></b></h2>
+        <img src="Pic06.png" alt="Circuit Design" class="center">
+    </section>
+
+    <section id="ADVANTAGES" class="main-section">
+        <h2><b><u>ADVANTAGES</u></b></h2>
+        <p>This technology is recommended for efficient automated irrigation systems and it may provide a valuable toolfor conserving water planning and irrigation scheduling which is extendable to other similar agricultural crops.Maximum absorption of the water by the plant is ensured by spreading the water uniformly using a servo motor.So, there is minimal wastage of water. This system also allows controlling the amount of water delivered to theplants when it is needed based on types of plants by monitoring soil moisture and temperature. This project canbe used in large agricultural area where human effort needs to be minimized. Many aspects of the system can becustomized and fine-tuned through software for a plant requirement.</p>
+    </section>
+
+    <section id="FUTURE SCOPE" class="main-section">
+        <h2><b><u>FUTURE SCOPE</u></b></h2>
+        <p>We   can   interface   LCD   screen   in   order   to   display   the   current   status  of   the   soil   moisture   content   levels,percentage of water utilized to water the plant, duration of time for which the water pump is ON, etc. We canalso show the graphical representation of the moisture content levels in the soil. To improve the efficiency andeffectiveness of the system, the following recommendations can be put into consideration. Option of controllingthe water pump can be given to the farmer. The farmer may choose to stop the growth of crops or the crops mayget damaged due to adverse weather conditions. In such cases farmer may need to stop the system remotely.The idea of  using  IOT  for  irrigation can  be  extended further  to other activities in  farming such  as cattlemanagement, fire detection and climate control. This would minimize human intervention in farming activities.</p>
+    </section>
+
+    <section id="CONCLUSION" class="main-section">
+        <h2><b><u>CONCLUSION</u></b></h2>
+        <p>In the normal irrigation pattern, the water wastage is high since it is done manually. This proposed systemconsists the advantage of both manually operated as well as automatic irrigation pattern, which paves the pathfor the  increased   yield [5]. Moreover,  in  dry   areas  where there is  inadequate   rainfall, irrigation  becomesdifficult. Hence, we require an automatic system that will precisely monitor and control the water requirementsin the field. Installing Smart irrigation system saves time and ensures judicious usage of water. Moreover, thisarchitecture uses microcontroller which promises an increase in system life by reducing power consumption [4]Embedded system for computerized irrigation of an agriculture subject gives an able solution to assist web
+            page- precise irrigation control that permits producers to maximize their productivity whilst saving the water.</p>
+    </section>
+
+    <section id="References" class="main-section">
+        <h2><b><u>References</u></b></h2>
+        <p><b>[1]</b> DOI: 10.1109/ICDSBA.2018.00033Conference:   2nd   International   Conference   on   Data   Science   and   Business  Analytics   (ICDSBA  2018   )  At:ChangSha, Hunan, China<br><b>[2]</b> International Journal of Pure and Applied Mathematics Volume 119 No. 15 2018, 1155-1168 ISSN:1314-3395 (on-line version) url: <a href="http://www.acadpubl.eu/hub/">http://www.acadpubl.eu/hub/</a> <br><b>[3]</b> Advance in Electronic and Electric Engineering. ISSN 2231-1297, Volume 4, Number 4 (2014), pp.341-346 © Research India Publications <a href="http://www.ripublication.com/aeee.htm">http://www.ripublication.com/aeee.htm</a> <br><b>[4]</b> IOSR Journal of Electronics and Communication Engineering (IOSR-JECE) e-ISSN: 2278-2834,p-ISSN: 2278-8735.Volume 10, Issue 3, Ver. II (May - Jun.2015), PP 32-36 <a href="www.iosrjournals.org">www.iosrjournals.org</a> <br><b>[5]</b> International Conference on Advances in Thermal Engineering and Applications Journal of Physics:Conference Series 2054 (2021) 012074 IOP Publishing doi:10.1088/1742-6596/2054/1/012074</p>
+    </section>
+</body>
+</html>
